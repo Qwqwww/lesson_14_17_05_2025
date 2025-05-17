@@ -1,12 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=["get", "post"])
 def index():
-    return render_template("index.html", message="Hello!!!!!!!")
+    message = "Стартовое сообщение"
+    if request.method == "POST":
+        message = "Получен пост запрос"
+    return render_template("index.html", message=message)
 
 
 app.run()

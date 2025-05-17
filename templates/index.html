@@ -3,7 +3,17 @@
         <title>Калькулятор стоимости недвижимости</title>
     </head>
     <body>
-        <h1>Заголовок</h1>
+        <h1>Калькулятор стоимости недвижимости</h1>
+        <form method="post">
+            <p>
+                <label>Площадь квартиры в кв. м:</label>
+                <input name="area">
+            </p>
+            <p>
+                <input type="submit">
+            </p>
+        </form>
+
         <p>
             {% if message %}
             {{ message }}
