@@ -19,6 +19,3 @@ def index():
         cost = predict(area)
         message = f"Стоимость недвижимости площадью {area} кв. м. равна {cost} руб."
     return render_template("index.html", message=message)
-
-
-app.run()
