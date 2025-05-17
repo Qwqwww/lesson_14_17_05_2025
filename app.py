@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello"
+    return "<p>Hello</p><h1>Заголовок</h1>"
 
 
 app.run()
